@@ -1,8 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { ClerkLoading, ClerkLoaded, SignedIn, SignedOut, SignUpButton, SignInButton } from "@clerk/nextjs";
-import { Loader } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+
+import { Loader } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+
+import { ClerkLoading, ClerkLoaded, SignedIn, SignedOut, SignUpButton, SignInButton } from "@clerk/nextjs";
 
 export default function Home() {
 	return (
@@ -18,7 +21,7 @@ export default function Home() {
 				<h1 className="text-xl lg:text-3xl font-bold text-neutral-600 max-w-[480px] text-center">
 					Learn, practice, master Cebuano with Sugbolingo!
 				</h1>
-				<div>
+				<div className="flex flex-col gap-y-3 items-center max-w-[330px] w-full">
 					<ClerkLoading>
 						<Loader className="h-5 w-5 text-muted-foreground animate-spin" />
 					</ClerkLoading>
